@@ -23,4 +23,4 @@ def pipeline():
     if signal_2 != 200:
         return df, signal_2
 
-    return '✅ La ejecución de query fue exitosa', 200
+    return print(df.head()), 200
