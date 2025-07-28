@@ -22,5 +22,15 @@ def pipeline():
 
     if signal_2 != 200:
         return df, signal_2
+    
+    df_str = df.head().to_string()
 
-    return '✅ La ejecución de query fue exitosa', 200
+    output = f"""
+    ✅ La ejecución de query fue exitosa.
+
+    El output del dataframe es:
+
+    {df_str}
+    """
+
+    return output, 200
