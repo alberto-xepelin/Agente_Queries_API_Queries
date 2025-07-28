@@ -18,5 +18,5 @@ def ejecutar_query(query, client):
         return df, 200
     
     except Exception as e:
-        return f"❌ Error al ejecutar query: \n {e}", 500
+        return f"❌ Error al ejecutar query: \n\n {e}", 500
     
