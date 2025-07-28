@@ -9,7 +9,13 @@ print("✔ Flask app is loading...")
 
 @app.route("/", methods=["POST"])
 def pipeline():
-    query = request.args.get("query", "-")
+    #query = request.args.get("query", "-")
+
+    # Cambio de input
+    data = request.get_json()
+    query = data.get("query", "-")
+
+    print('QUERY:', repr(query))
 
     # 1. Setear el cliente
     client, signal_1 = create_client()
