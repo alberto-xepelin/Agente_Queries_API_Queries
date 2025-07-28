@@ -1,6 +1,7 @@
 from flask import Flask, request
 from io import StringIO
 from functions import create_client, ejecutar_query
+from tabulate import tabulate
 
 app = Flask(__name__)
 
@@ -23,7 +24,7 @@ def pipeline():
     if signal_2 != 200:
         return df, signal_2
     
-    df_str = df.head().to_string()
+    df_str = tabulate(df.head(), headers='keys', tablefmt='grid')
 
     output = f"""
     ✅ La ejecución de query fue exitosa.
