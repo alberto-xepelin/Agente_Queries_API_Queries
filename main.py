@@ -15,8 +15,6 @@ def pipeline():
     data = request.get_json()
     query = data.get("query", "-")
 
-    print('QUERY:', repr(query))
-
     # 1. Setear el cliente
     client, signal_1 = create_client()
 
