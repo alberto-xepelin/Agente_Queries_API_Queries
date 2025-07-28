@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 print("✔ Flask app is loading...")
 
-@app.route("/", methods=["GET"])
+@app.route("/", methods=["POST"])
 def pipeline():
     query = request.args.get("query", "-")
 
