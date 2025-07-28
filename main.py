@@ -16,7 +16,7 @@ def pipeline():
     if signal_1 != 200:
         return client, signal_1
     
-    # 2. Ejecutar la query
+    # 2. Ejecutar la query.
 
     df, signal_2 = ejecutar_query(query, client)
 
