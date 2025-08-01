@@ -30,12 +30,10 @@ def pipeline():
     
     df_str = tabulate(df.head(), headers='keys', tablefmt='github')
 
-    #output = f"""
-    #✅ La ejecución de query fue exitosa.
-    #```
-    #{df_str}
-    #```
-    #"""
+    #output = "✅ La ejecución de query fue exitosa.\n\n" \
+    #     "```\n" \
+    #     f"{df_str}\n" \
+    #     "```"
 
     output = "✅ La ejecución de query fue exitosa.\n\n" \
          "```\n" \
