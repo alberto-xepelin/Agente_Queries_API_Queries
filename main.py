@@ -35,9 +35,12 @@ def pipeline():
     #     f"{df_str}\n" \
     #     "```"
 
-    output = "✅ La ejecución de query fue exitosa.\n\n" \
-         "```\n" \
-         f"{df_str}\n" \
-         "```"
+    output = f"""
+    ✅ La ejecución de query fue exitosa.
 
-    return output, 200
+    <div style="overflow-x: auto;">
+    {df_str}
+    </div>
+    """
+
+    return output, 200, {'Content-Type': 'text/html'}
