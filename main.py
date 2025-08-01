@@ -33,8 +33,6 @@ def pipeline():
     output = f"""
     ✅ La ejecución de query fue exitosa.
 
-    El head del dataframe de salida es:
-
     ```
     {df_str}
     ```
