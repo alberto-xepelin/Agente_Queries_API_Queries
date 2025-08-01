@@ -28,14 +28,17 @@ def pipeline():
     if signal_2 != 200:
         return df, signal_2
     
-    df_str = tabulate(df.head(), headers='keys', tablefmt='grid')
+    df_str = tabulate(df.head(), headers='keys', tablefmt='github')
 
     output = f"""
     ✅ La ejecución de query fue exitosa.
 
     El head del dataframe de salida es:
 
+    ```
     {df_str}
+    ```
+    
     """
 
     return output, 200
