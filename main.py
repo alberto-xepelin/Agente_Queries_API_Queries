@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from io import StringIO
 from functions import create_client, ejecutar_query
 from tabulate import tabulate
@@ -30,14 +30,10 @@ def pipeline():
     
     df_str = tabulate(df.head(), headers='keys', tablefmt='github')
 
-    #output = "✅ La ejecución de query fue exitosa.\n\n" \
-    #     "```\n" \
-    #     f"{df_str}\n" \
-    #     "```"
-
-    output = "✅ La ejecución de query fue exitosa.\n\n" \
-         "```\n" \
-         f"{df_str}\n" \
-         "```"
-
-    return output, 200
+    response_data = {
+        "status": "success",
+        "message": "✅ La ejecución de query fue exitosa.",
+        "table": df_str
+    }
+    
+    return jsonify(response_data), 200
