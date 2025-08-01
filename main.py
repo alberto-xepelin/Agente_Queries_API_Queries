@@ -32,11 +32,9 @@ def pipeline():
 
     output = f"""
     ✅ La ejecución de query fue exitosa.
-
     ```
     {df_str}
     ```
-    
     """
 
     return output, 200
