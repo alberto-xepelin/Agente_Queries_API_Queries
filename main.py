@@ -28,7 +28,7 @@ def pipeline():
     if signal_2 != 200:
         return df, signal_2
     
-    df_str = tabulate(df.head(), headers='keys', tablefmt='github')
+    df_str = tabulate(df.head(), headers='keys', tablefmt='grid')
 
     output = "✅ La ejecución de query fue exitosa.\n\n" \
          "```text\n" \
